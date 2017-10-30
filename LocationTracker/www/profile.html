@@ -1,0 +1,85 @@
+﻿<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#profile-top-navbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" id="viewRequestsButton" href=""><span class="badge" id="requestsCount"></span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="profile-top-navbar">
+            <ul class="nav navbar-nav">
+                <li><a id="navTermsPage" href="#">Terms & Conditions</a></li>
+                <li><a a id="navPrivacyPage" href="#">Privacy Policy</a></li>
+                <li><a href="" data-toggle="modal" data-target="#feedbackModal">Feedback</a></li>
+                <li><a href="" id="profileSupportButton">Support</a></li>
+                <li><a href="" id="donateButton">Donate</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row tile silver-bg">
+        <div class="col-xs-12">
+            <p class="text-center" style="width:100%" id="profile-picture-container"></p>
+            <h3 class="text-center" id="userWelcome"></h3>
+        </div>
+    </div>
+    <div class="row tile">
+        <div class="col-xs-12 no-pad white-bg">
+            <h3>Users you are currently watching</h3>
+                <table class="table" id="devicesTable">
+                    <tbody id="devicesTableBody"></tbody>
+                </table>
+        </div>
+    </div>
+    <div class="modal fade" id="requestModal" role="dialog" style="color:black">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" id="closeModal" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Request A Device</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Enter the email of the user that you would like to track location:</p>
+                    <input type="email" class="form-control" id="requestedUserEmail" placeholder="ex. john@mail.com"/>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-default" id="sendRequest" data-dismiss="modal">Send</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="feedbackModal" role="dialog" style="color:black">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Send Feedback</h4>
+                </div>
+                <div class="modal-body">
+                    <input type="text" class="form-control" id="feedBackInput" placeholder="Enter feedback here" />
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-default" id="sendFeedback" data-dismiss="modal">Send</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<nav class="navbar navbar-inverse navbar-fixed-bottom" id="profile-bottom-navbar">
+    <div class="container-fluid" style="padding-left:0px; padding-right: 0px;">
+        <div class="btn-group btn-group-justified" style="margin-top:5px;">
+            <a href="#" class="btn btn-success navbar-btn" id="requestDeviceButton" data-toggle="modal" data-target="#requestModal">Request <span class="glyphicon glyphicon-plus"></span></a>
+            <a href="#" class="btn btn-primary"  id="refreshButton"><span class="glyphicon glyphicon-refresh"></span></a>
+            <a href="#" class="btn btn-danger navbar-btn" id="removeDeviceButton" >Remove <span class="glyphicon glyphicon-minus"></span></a>
+        </div>
+    </div>
+</nav>
